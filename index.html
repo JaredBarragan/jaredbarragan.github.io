@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html><body style="margin:0;overflow:hidden;">
+<video id="cam" autoplay playsinline style="width:100%;height:100%;object-fit:cover;"></video>
+<script>
+navigator.mediaDevices.getUserMedia({video:{facingMode:"environment"}})
+  .then(stream => { document.getElementById('cam').srcObject = stream; });
+</script>
+</body></html>
